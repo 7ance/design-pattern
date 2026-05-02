@@ -2,7 +2,6 @@ package cn.lance.designpattern.structural.bridge;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 
 /**
  * 桥接模式就是将一个类层次转化为多个相关的类层次，避免单个类层次的失控<br/>
