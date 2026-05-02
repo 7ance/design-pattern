@@ -1,5 +1,6 @@
 package cn.lance.designpattern.structural.bridge;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +11,7 @@ import lombok.Setter;
  * 抽象部分
  */
 @Getter
-@Setter
+@AllArgsConstructor
 public class Abstraction {
 
     /**

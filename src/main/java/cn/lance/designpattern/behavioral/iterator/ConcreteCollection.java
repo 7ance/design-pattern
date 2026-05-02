@@ -10,10 +10,9 @@ import java.util.List;
  * 具体集合类
  */
 @Getter
-@Setter
 public class ConcreteCollection implements IterableCollection {
 
-    private List<String> elements = new ArrayList<>();
+    private final List<String> elements = new ArrayList<>();
 
     @Override
     public Iterator createIterator() {

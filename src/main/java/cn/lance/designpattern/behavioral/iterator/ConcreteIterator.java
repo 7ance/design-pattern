@@ -1,16 +1,11 @@
 package cn.lance.designpattern.behavioral.iterator;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 /**
  * 具体迭代器
  */
 public class ConcreteIterator implements Iterator {
 
     private final ConcreteCollection concreteCollection;
-
-    private final Lock LOCK = new ReentrantLock();
 
     private int nextIndex = 0;
 
@@ -25,11 +20,9 @@ public class ConcreteIterator implements Iterator {
     @Override
     public Object getNext() {
         if (nextIndex <= concreteCollection.getElements().size() - 1) {
-            LOCK.lock();
             String element = concreteCollection.getElements().get(nextIndex);
             nextIndex++;
             left--;
-            LOCK.unlock();
             return element;
         }
         return null;

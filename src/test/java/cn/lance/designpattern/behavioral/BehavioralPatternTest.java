@@ -40,7 +40,7 @@ public class BehavioralPatternTest {
 
             h1.handle(new Request(System.currentTimeMillis()));
 
-            TimeUnit.MICROSECONDS.sleep(500);
+            TimeUnit.MILLISECONDS.sleep(1);
         }
     }
 

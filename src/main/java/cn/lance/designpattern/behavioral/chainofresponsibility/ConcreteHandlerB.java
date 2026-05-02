@@ -13,11 +13,8 @@ public class ConcreteHandlerB extends BaseHandler {
     public void handle(Request request) {
         log.info("B 对 {} 进行处理", request);
 
-        if (callFlag && super.next != null) {
-            next.handle(request);
-        } else {
-            log.info("{} 没有后续，结束", request);
-        }
+        // 父类统一处理链路传递
+        super.handle(request);
     }
 
 }

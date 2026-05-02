@@ -35,13 +35,11 @@ public class StructuralPatternTest {
      */
     @Test
     public void testBridgePattern() {
-        Abstraction abstraction = new Abstraction();
-        abstraction.setImplementation(new ConcreteImplementation());
+        Abstraction abstraction = new Abstraction(new ConcreteImplementation());
         abstraction.feature1();
         abstraction.feature2();
 
-        RefinedAbstraction refinedAbstraction = new RefinedAbstraction();
-        refinedAbstraction.setImplementation(new ConcreteImplementation());
+        RefinedAbstraction refinedAbstraction = new RefinedAbstraction(new ConcreteImplementation());
         refinedAbstraction.feature3();
     }
 

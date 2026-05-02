@@ -4,7 +4,7 @@ package cn.lance.designpattern.creational.builder;
 /**
  * 生成器具体实现1
  */
-public class ConcreteBuilder1 implements Builder {
+public class ConcreteBuilder1 implements Builder<Product1> {
 
     private Product1 product;
 

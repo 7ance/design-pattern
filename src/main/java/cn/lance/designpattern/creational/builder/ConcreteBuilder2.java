@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 /**
  * 生成器具体实现2
  */
-public class ConcreteBuilder2 implements Builder {
+public class ConcreteBuilder2 implements Builder<Product2> {
 
     private Product2 product;
 

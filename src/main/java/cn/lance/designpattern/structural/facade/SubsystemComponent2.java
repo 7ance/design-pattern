@@ -10,6 +10,6 @@ import lombok.extern.slf4j.Slf4j;
 public class SubsystemComponent2 {
 
     public void execute() {
-        log.info(getClass().getSimpleName() + " 执行中...");
+        log.info("{} 执行中...", getClass().getSimpleName());
     }
 }

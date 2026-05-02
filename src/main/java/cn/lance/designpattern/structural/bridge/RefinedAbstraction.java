@@ -5,6 +5,10 @@ package cn.lance.designpattern.structural.bridge;
  */
 public class RefinedAbstraction extends Abstraction {
 
+    public RefinedAbstraction(Implementation implementation) {
+        super(implementation);
+    }
+
     /**
      * 新的抽象部分的逻辑
      */

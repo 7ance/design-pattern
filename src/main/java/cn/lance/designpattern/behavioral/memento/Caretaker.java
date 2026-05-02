@@ -34,8 +34,10 @@ public class Caretaker {
     }
 
     public void undo() {
-        Originator.Snapshot snapshot = history.pop();
-        originator.restore(snapshot);
+        if (!history.isEmpty()) {
+            Originator.Snapshot snapshot = history.pop();
+            originator.restore(snapshot);
+        }
     }
 
 }

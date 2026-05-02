@@ -11,12 +11,7 @@ public class FlyweightFactory {
     private static final Map<String, Flyweight> CACHE = new ConcurrentHashMap<>();
 
     public Flyweight getFlyweight(String repeatingState) {
-        Flyweight flyweight;
-        if (!CACHE.containsKey(repeatingState)) {
-            flyweight = new Flyweight(repeatingState);
-            CACHE.put(repeatingState, flyweight);
-        }
-        return CACHE.get(repeatingState);
+        return CACHE.computeIfAbsent(repeatingState, Flyweight::new);
     }
 
 }

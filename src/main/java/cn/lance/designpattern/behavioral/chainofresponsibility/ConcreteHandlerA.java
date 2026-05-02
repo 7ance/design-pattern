@@ -15,14 +15,11 @@ public class ConcreteHandlerA extends BaseHandler {
 
         if (request.getId() % 2 != 0) {
             log.info("id为奇数，不进行后续调用");
-            callFlag = false;
+            setCallFlag(false);
         }
 
-        if (callFlag && super.next != null) {
-            next.handle(request);
-        } else {
-            log.info("{} 没有后续，结束", request);
-        }
+        // 父类统一处理链路传递
+        super.handle(request);
     }
 
 }
