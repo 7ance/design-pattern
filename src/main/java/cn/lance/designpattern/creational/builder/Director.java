@@ -7,18 +7,18 @@ import lombok.extern.slf4j.Slf4j;
  * 主管类，在客户端和生成器之间的一层，使得生成对象的过程可以更加灵活
  */
 @Slf4j
-public class Director<T> {
+public class Director {
 
-    private Builder<T> builder;
+    private Builder<?> builder;
 
     public static final String SIMPLE = "simple";
 
 
-    public Director(Builder<T> builder) {
+    public Director(Builder<?> builder) {
         this.builder = builder;
     }
 
-    public void changeBuilder(Builder<T> builder) {
+    public void changeBuilder(Builder<?> builder) {
         this.builder = builder;
     }
 
